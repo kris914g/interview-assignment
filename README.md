@@ -14,7 +14,7 @@ Make a copy of this repo. Solve the task below. Push your code to a public repo,
 
 Your solution should include a short readme describing your solution, how to use/test it and any final considerations such as known errors, next steps, security concerns etc. Don’t worry we are not expecting this thing to be perfect.
 
-#Assignment answer
+# Assignment answer
 The program can be executed by entering the following command:
 
 `php Main.php`
@@ -27,6 +27,7 @@ To verify the data integrity of the `data.json`file, the decoded array from `dat
 The users which are verified will get their ids pushed to a new array, where the array of ids will be composed to a single string. The string will be used in the delete query, which ensures that it is only necessary with one query to delete the verified users.
 
 At last, the PDO object gets assigned null, to delete all references. 
-##Final considerations
+
+## Final considerations
 One of the last considerations for the solution, could certainly be optimization of two foreach loops from line 38-44. which is not particularly effective on larger data sets, since it has the time complexity of `O(N^2)` which is not great for lager data sets. 
 However this could be fixed with the php function `array_intersect()`. This could be implemented if the arrays had the same array structure.
