@@ -14,12 +14,12 @@ function connect() {
         $pdo = new PDO($dsn, $username, $password);
         $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 
-        echo "Connection successfully";
+        echo "Connection successfully \n";
 
         return $pdo;
 
         //Catching any PDO error
     } catch (PDOException $e){
-        die("Connection failed! " . $e->getMessage());
+        die("Connection failed! \n" . $e->getMessage());
     }
 }
